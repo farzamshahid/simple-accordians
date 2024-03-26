@@ -2,7 +2,7 @@ import { useState } from "react";
 import data from "./Components/data";
 import "./App.css";
 
-export default function Accordian() {
+function Accordian() {
   const [selected, setSelected] = useState(null);
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiple, setMultiple] = useState([]);
@@ -63,3 +63,4 @@ export default function Accordian() {
     </div>
   );
 }
+export default Accordian
