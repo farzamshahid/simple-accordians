@@ -34,12 +34,7 @@ const Accordian = () => {
                                     <div className="content">{dataItem.answer}</div>
 
                                 )}
-                            {/* {
-                                selected === dataItem.id || multiple.indexOf(dataItem.id) !== -1 ?
-                                    <div className="content">{dataItem.answer}</div>
-                                    :
-                                    null
-                            } */}
+
                         </div>
                     )
                     )) : <div>No data found</div>
