@@ -1,8 +1,9 @@
+
 import { useState } from "react";
 import data from "./Components/data";
-import "./App.css";
+import "./App.css"
+const Accordian = () => {
 
-function Accordian() {
   const [selected, setSelected] = useState(null);
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiple, setMultiple] = useState([]);
@@ -14,6 +15,7 @@ function Accordian() {
   function handleMultiSelection(getCurrentId) {
     let cpyMutiple = [...multiple];
     const findIndexOfCurrentId = cpyMutiple.indexOf(getCurrentId);
+
     console.log(findIndexOfCurrentId);
     if (findIndexOfCurrentId === -1) cpyMutiple.push(getCurrentId);
     else cpyMutiple.splice(findIndexOfCurrentId, 1);
@@ -44,11 +46,12 @@ function Accordian() {
               </div>
               {enableMultiSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
-                  <div className="acc-content ">{dataItem.answer}</div>
+                  <div className="acc-content">{dataItem.answer}</div>
                 )
                 : selected === dataItem.id && (
                   <div className="acc-content ">{dataItem.answer}</div>
                 )}
+
             </div>
           ))
         ) : (
@@ -58,4 +61,5 @@ function Accordian() {
     </div>
   );
 }
+
 export default Accordian
